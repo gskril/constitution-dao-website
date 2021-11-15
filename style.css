@@ -59,14 +59,21 @@ a:focus {
 .container {
 	margin: 0 auto;
 	max-width: 75rem;
-	padding: 2rem;
+	padding: 0 2rem;
 }
 
 .nav {
 	margin-bottom: 2rem;
+	background-image: url(./imgs/gradient-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 4.25rem;
+	padding-top: 2rem;
 }
 
 .nav__logo {
+	display: flex;
+	align-items: center;
 	white-space: break-spaces;
 }
 
@@ -83,6 +90,11 @@ a:focus {
 	align-items: center;
 }
 
+.nav__link {
+	display: flex;
+	align-items: center;
+}
+
 .nav__link-icon {
 	width: 1.5rem;
 }
@@ -96,6 +108,7 @@ a:focus {
 	width: 100%;
 	height: 12rem;
 	margin-bottom: 2.5rem;
+	margin-top: -1rem;
 }
 
 .mobile-hero__logo {
@@ -177,6 +190,7 @@ a:focus {
 .footer {
 	text-align: center;
 	margin-top: 2rem;
+	margin-bottom: 3rem;
 	padding: 1rem 0.5rem;
 }
 
@@ -247,7 +261,7 @@ a:focus {
   }
 }
 
-@media screen and (min-width: 52em) {
+@media only screen and (min-width: 52em) {
 	.desktop-only {
 		display: inherit;
 	}
@@ -270,6 +284,8 @@ a:focus {
 
 
 	.nav {
+		padding: 2rem;
+		margin-bottom: 0;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -294,9 +310,10 @@ a:focus {
 	.content {
 		display: grid;
 		position: relative;
-		margin-top: 4rem;
+		margin-top: 0;
 		grid-template-columns: 1fr 1fr;
 		gap: 3rem;
+		padding: 2rem;
 	}
 
 	.content__left,
@@ -356,6 +373,7 @@ a:focus {
 		display: flex;
 		justify-content: space-between;
 		padding: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	.copyright {
@@ -376,6 +394,14 @@ a:focus {
 		--color-accent: rgba(51, 51, 51, 1);
 		--color-accent-light: rgba(255, 173, 77, 1);
 		--color-accent-lighter: rgba(255, 185, 102, 0.09);
+	}
+
+	p {
+		opacity: 0.9;
+	}
+
+	.nav {
+		background-image: none;
 	}
 
 	.card__title h2 {
