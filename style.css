@@ -59,18 +59,25 @@ a:focus {
 .container {
 	margin: 0 auto;
 	max-width: 75rem;
-	padding: 2rem;
+	padding: 0 2rem;
 }
 
 .nav {
 	margin-bottom: 2rem;
+	padding: 0 2rem;
+	background-image: url(./imgs/gradient-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height:100px;
 }
 
 .nav__logo {
 	white-space: break-spaces;
+	margin-top: 40px;
 }
 
 .nav__mobile-title {
+	margin-top: 2rem;
 	font-size: 1.25rem;
 	font-weight: 700;
 	text-decoration: none;
@@ -247,7 +254,7 @@ a:focus {
   }
 }
 
-@media screen and (min-width: 52em) {
+@media only screen and (min-width: 52em) {
 	.desktop-only {
 		display: inherit;
 	}
@@ -297,6 +304,7 @@ a:focus {
 		margin-top: 4rem;
 		grid-template-columns: 1fr 1fr;
 		gap: 3rem;
+		padding: 2rem;
 	}
 
 	.content__left,
