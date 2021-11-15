@@ -42,6 +42,10 @@ p {
 	opacity: 0.8;
 }
 
+img {
+	max-width: 100%;
+}
+
 a:hover,
 a:focus {
 	opacity: 0.8;
