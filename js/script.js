@@ -19,3 +19,10 @@ function numberWithCommas(x) {
 	)}`
 	document.getElementById('eth').textContent = `${raiedEth}`
 })()
+
+let timespan = countdown(1637294408000).toString()
+document.getElementById('countdown').textContent = timespan
+setInterval(function() {
+	timespan = countdown(1637294408000).toString()
+	document.getElementById('countdown').textContent = timespan + ' until auction'
+}, 1000)

@@ -12,7 +12,8 @@
 	<meta property="og:image" content="https://constitutiondao.com/assets/images/gang-fractionalizes.png?utm_source=twitter">
 
 	<!-- Styles and scripts -->
-	<script defer="true" src="/script.js"></script>
+	<script defer="true" src="/js/countdown.min.js"></script>
+	<script defer="true" src="/js/script.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
 	<link rel="stylesheet" href="/style.css">
 
@@ -32,8 +33,8 @@
 	
 	<div class="container">
 		<nav class="nav">
-			<a href="" class="nav__logo desktop-only">
-				<span class="nav__logo-1">(📜,📜)</span>
+			<a href="/" class="nav__logo desktop-only">
+				<span class="nav__logo-1">(📜, 📜) </span>
 				<span class="nav__logo-2">ConstitutionDAO</span>
 			</a>
 			<div class="nav__links">
@@ -55,7 +56,34 @@
 
 		<main class="content">
 			<div class="content__left">
-				<img class="desktop-only" src="/imgs/placeholder.png">
+				<div class="content__fixed desktop-only">
+					<img class="desktop-only" src="/imgs/placeholder.png">
+					<div class="scrolling">
+						<div class="scrolling__content">
+							<p>We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defense, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</p>
+							<p>All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist
+								of a Senate and House of Representatives.</p>
+							<p>The House of Representatives shall be composed of Members chosen every second Year by the People of the several
+								States, and the Electors in each State shall have the Qualifications requisite for Electors of the most numerous
+								Branch of the State Legislature.</p>
+							<p>No Person shall be a Representative who shall not have attained to the Age of twenty five Years, and been seven Years
+								a Citizen of the United States, and who shall not, when elected, be an Inhabitant of that State in which he shall be
+								chosen.</p>
+							<p>Representatives and direct Taxes shall be apportioned among the several States which may be included within this
+								Union, according to their respective Numbers, which shall be determined by adding to the whole Number of free
+								Persons, including those bound to Service for a Term of Years, and excluding Indians not taxed, three fifths of all
+								other Persons. The actual Enumeration shall be made within three Years after the first Meeting of the Congress of
+								the United States, and within every subsequent Term of ten Years, in such Manner as they shall by Law direct. The
+								Number of Representatives shall not exceed one for every thirty Thousand, but each State shall have at Least one
+								Representative; and until such enumeration shall be made, the State of New Hampshire shall be entitled to chuse
+								three, Massachusetts eight, Rhode-Island and Providence Plantations one, Connecticut five, New-York six, New Jersey
+								four, Pennsylvania eight, Delaware one, Maryland six, Virginia ten, North Carolina five, South Carolina five, and
+								Georgia three.</p>
+							<p>When vacancies happen in the Representation from any State, the Executive Authority thereof shall issue Writs of
+								Election to fill such Vacancies.</p>
+						</div>
+					</div>
+				</div>
 				<div class="mobile-hero mobile-only">
 					<span class="mobile-hero__logo">(📜,📜)</span>
 				</div>
@@ -82,12 +110,12 @@
 							</clipPath>
 							</defs>
 						</svg>
-						<h2><span id="eth">000</span> ETH — <span id="usd">$0,000,000</span> Raised</h2>
+						<h2><span id="eth">000</span> ETH <span style="color: #373736;">|</span> <span id="usd">$0,000,000</span> Raised</h2>
 					</div>
-					<p class="card__countdown">4 days, 14 hours, 32 minutes until auction</p>
+					<p class="card__countdown" id="countdown">0 days, 0 hours, 00 minutes until auction</p>
 					<a href="https://juicebox.money/#/p/constitutiondao" class="btn" target="_blank" rel="noreferrer">Buy The Constitution</a>
 				</div>
-				<div class="sothebys">
+				<div class="sothebys content__section">
 					<span class="sothebys__text">offered by</span>
 					<img src="/imgs/sothebys.png" class="sothebys__img" alt="Sotheby's">
 				</div>
@@ -100,6 +128,29 @@
 						current owner. We intend to put The Constitution in the hands of
 						The People.</p>
 					<a href="/constitution.html" class="background__link">📜  Read the constitution</a>
+				</div>
+				<div class="content__section">
+					<h2>Frequently asked questions</h2>
+					<div class="question">
+						<h3 class="question__q">What is your plan?</h3>
+						<p>Immediately, to preserve and protect the Constitution. We intend to find a safe home for it, such as the
+							Smithsonian.</p>
+						<p>The ConstitutionDAO will govern future decisions around destination, preservation, as well as plans for
+							purchasing other historical artifacts.</p>
+					</div>
+					<div class="question">
+						<h3 class="question__q">Why is it a DAO?</h3>
+						<p><strong>In short: so the people own it. Together.</strong></p>
+						<p>Decentralization and cryptocurrency (Web3) has created structures that allow people to self-govern and
+						fractionalize ownership with unparalleled levels of autonomy and freedom. It’s fitting that we use this technology
+						to honor and protect the greatest historical tool for human governance: The US Constitution.</p>
+					</div>
+					<div class="question">
+						<h3 class="question_q">Why the Constitution?</h3>
+						<p>We believe that The US Constitution is a shared good and should be shared and displayed in public spaces — by
+							the people whose governance and freedom it was created to protect. By purchasing it with a DAO, we distribute
+							the responsibility among many, and provide the infrastructure to keep the Constitution preserved.</p>
+					</div>
 				</div>
 				
 			</div>
