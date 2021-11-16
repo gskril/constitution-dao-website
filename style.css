@@ -170,6 +170,9 @@ a:focus {
 	margin: 10px 10px 10px 16px;
 	height: 12px;
 	width: 12px;
+	min-height: 12px;
+    	max-height: 12px;
+	min-width: 12px;
 	transform: scale(1);
 	animation: pulse-black 2s infinite;
   }
