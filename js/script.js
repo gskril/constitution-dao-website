@@ -9,7 +9,7 @@ function numberWithCommas(x) {
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 
-const usdGoal = 30000000
+const usdGoal = 35000000
 
 ;(async function () {
 	const raised = await fetchData()
@@ -51,7 +51,7 @@ setInterval(function() {
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var daysLabel = days !== 1 ? " days, " : " day, ";
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var hoursLabel = hours !== 1 ? " hours, " : " hour, ";
+  var hoursLabel = hours !== 1 ? " hours" : " hour";
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var minutesLabel = minutes !== 1 ? " minutes " : " minute ";
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -61,7 +61,7 @@ setInterval(function() {
 	  document.getElementById("countdown").innerHTML = "It's auction time!!";
   } else {
 	  // Display the result in the element with id="demo"
-	  document.getElementById("countdown").innerHTML = days + daysLabel + hours + hoursLabel
-	  + minutes + minutesLabel + " until auction";
+	  document.getElementById("countdown").innerHTML = hours + hoursLabel
+	  + " and " + minutes + minutesLabel + " until auction";
   }
 }, 1000)
