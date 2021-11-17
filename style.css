@@ -473,4 +473,12 @@ a:focus {
 		opacity: 0.6;
 	}
 
+	.slider {
+		background-color: rgba(255, 185, 102, 0.3);
+	}
+
+	.slider__progress,
+	.blob.orange {
+		background-color: rgba(255, 185, 102, 1);
+	}
 }
