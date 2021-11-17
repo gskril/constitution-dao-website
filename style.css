@@ -297,6 +297,30 @@ a:focus {
   }
 }
 
+.slider {
+	width: 100%;
+	height: 1rem;
+	position: relative;
+	margin-bottom: 1.325rem;
+	background-color: var(--color-accent-light);
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.slider__progress {
+	height: 100%;
+	width: 0%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 0.5rem;
+	background-color: var(--color-accent);
+	transition: all .70s ease-in-out;
+	-webkit-transition: all .7s ease-in-out;
+}
+
 @media only screen and (min-width: 52em) {
 	.desktop-only {
 		display: inherit;

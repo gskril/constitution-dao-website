@@ -9,16 +9,19 @@ function numberWithCommas(x) {
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 
+const usdGoal = 30000000
 
-(async function () {
+;(async function () {
 	const raised = await fetchData()
 	const raiedEth = raised.eth.split('.')[0]
 	const raisedUsd = raised.dollars.split('.')[0]
+	const percentage = (raisedUsd / usdGoal) * 100
 
 	document.getElementById('usd').textContent = `$${numberWithCommas(
 		raisedUsd
 	)}`
 	document.getElementById('eth').textContent = `${raiedEth}`
+	document.getElementById('progress').style.width = `${percentage}%`
 })()
 
 setInterval(function(){ 
@@ -26,11 +29,13 @@ setInterval(function(){
 		const raised = await fetchData()
 		const raiedEth = raised.eth.split('.')[0]
 		const raisedUsd = raised.dollars.split('.')[0]
+		const percentage = (raisedUsd / usdGoal) * 100
 	
 		document.getElementById('usd').textContent = `$${numberWithCommas(
 			raisedUsd
 		)}`
 		document.getElementById('eth').textContent = `${raiedEth}`
+		document.getElementById('progress').style.width = `${percentage}%`
 	})()
 }, 10000);
 
