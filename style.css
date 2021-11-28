@@ -270,16 +270,44 @@ a:focus {
 }
 
 .scrolling {
-	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	font-size: 150%;
+	text-align: justify;
+	transform-origin: 50% 20%;
+	transform: perspective(300px) rotateX(25deg);
 	overflow: hidden;
-	perspective: 45rem;
+	font-family: 'Brush Script MT';
+}
+
+.scrolling::before {
+	position: absolute;
+	z-index: 10;
+	content: '';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	pointer-events: none;
 }
 
 .scrolling__content {
-	padding: 3rem;
-	line-height: 1.8;
-	position: relative;
-	animation: crawl 80s linear;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	animation: crawl 230s linear infinite;
+	transform: scale(0.85);
+	-webkit-font-smoothing: antialiased;
 }
 
 .content__right {
@@ -287,14 +315,8 @@ a:focus {
 }
 
 @keyframes crawl {
-	0% {
-    top: -22rem;
-    transform: rotateX(30deg)  translateZ(0);
-  }
-	100% { 
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
-  }
+	0% { top: 0%; }
+	100% { top: -625%; }
 }
 
 .slider {
@@ -334,6 +356,8 @@ a:focus {
 		position: sticky;
 		position: -webkit-sticky;
 		top: 4rem;
+		height: 100vh;
+		overflow: hidden;
 	}
 
 	@media (prefers-color-scheme: dark) {
